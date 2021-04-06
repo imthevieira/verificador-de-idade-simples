@@ -18,7 +18,7 @@ function verificar() {
                img.setAttribute('src', 'foto-bebe-m.png')
            } else if (idade >= 10 && idade < 21) {
             img.setAttribute('src', 'foto-jovem-m.png')
-           } else if (idade < 50) {
+           } else if (idade < 70) {
             img.setAttribute('src', 'foto-adulto-m.png')
            } else {
             img.setAttribute('src', 'foto-idoso-m.png')
@@ -29,7 +29,7 @@ function verificar() {
                 img.setAttribute('src', 'foto-bebe-f.png')
             } else if (idade >= 10 && idade < 21) {
                 img.setAttribute('src', 'foto-jovem-f.png')
-            } else if (idade < 50) {
+            } else if (idade < 70) {
                 img.setAttribute('src', 'foto-adulto-f.png')
             } else {
                 img.setAttribute('src', 'foto-idoso-f.png')
