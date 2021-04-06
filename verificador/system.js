@@ -28,7 +28,7 @@ function verificar() {
             res.innerHTML = `Detectamos um ${gen} com ${idade} anos.`
             } else {
             img.setAttribute('src', 'skeleton.png')
-            res.innerHTML = `Detectamos um ${gen} com ${idade} anos.`
+            res.innerHTML = `Tu já ta morto né? você é uma ${gen} com ${idade} anos.`
             }
         } else if (fsex[1].checked) {
             gen  = 'Mulher'
