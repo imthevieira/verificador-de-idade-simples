@@ -16,27 +16,40 @@ function verificar() {
            if (idade >= 0 && idade < 10) {
                //kid
                img.setAttribute('src', 'foto-bebe-m.png')
+               res.innerHTML = `Detectamos um ${gen} com ${idade} anos.`
            } else if (idade >= 10 && idade < 21) {
             img.setAttribute('src', 'foto-jovem-m.png')
+            res.innerHTML = `Detectamos ua ${gen} com ${idade} anos.`
            } else if (idade < 70) {
             img.setAttribute('src', 'foto-adulto-m.png')
-           } else {
-            img.setAttribute('src', 'foto-idoso-m.png')
-           }
+            res.innerHTML = `Detectamos um ${gen} com ${idade} anos.`
+            } else if (idade >= 70 && idade <= 100){
+            img.setAttribute('src', 'foto-idoso-f.png')
+            res.innerHTML = `Detectamos um ${gen} com ${idade} anos.`
+            } else {
+            img.setAttribute('src', 'skeleton.png')
+            res.innerHTML = `Detectamos um ${gen} com ${idade} anos.`
+            }
         } else if (fsex[1].checked) {
             gen  = 'Mulher'
             if (idade >= 0 && idade < 10) {
                 img.setAttribute('src', 'foto-bebe-f.png')
+                res.innerHTML = `Detectamos uma ${gen} com ${idade} anos.`
             } else if (idade >= 10 && idade < 21) {
                 img.setAttribute('src', 'foto-jovem-f.png')
+                res.innerHTML = `Detectamos uma ${gen} com ${idade} anos.`
             } else if (idade < 70) {
                 img.setAttribute('src', 'foto-adulto-f.png')
-            } else {
+                res.innerHTML = `Detectamos uma ${gen} com ${idade} anos.`
+            } else if (idade >= 70 && idade <= 100){
                 img.setAttribute('src', 'foto-idoso-f.png')
+                res.innerHTML = `Detectamos uma ${gen} com ${idade} anos.`
+            } else {
+                img.setAttribute('src', 'skeleton.png')
+                res.innerHTML = `Tu já ta morta né? você é uma ${gen} com ${idade} anos.`
             }
         }
         res.style.textAlign = 'center'
-        res.innerHTML = `Detectamos ${gen} com ${idade} anos.`
         res.appendChild(img)
     }
 }
